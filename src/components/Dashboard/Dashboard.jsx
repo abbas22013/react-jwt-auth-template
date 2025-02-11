@@ -13,7 +13,7 @@ const Dashboard = () => {
     const fetchUsers = async () => {
         try {
             const fetchedUsers = await userService.index()
-            setListOfUsers(fetchedUsers)
+            console.log(fetchedUsers)
         } catch (err) {
             console.log(err)
         }
@@ -28,9 +28,6 @@ const Dashboard = () => {
       <p>
         This is the dashboard page where you can see a list of all the users.
       </p>
-      {listOfUsers.map((userObj) => (
-        <h4>{userObj.username}</h4>
-      ))}
     </main>
   );
 };
